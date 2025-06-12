@@ -3133,3 +3133,27 @@ input, select, textarea {
 #modal-close:hover {
 	color: #000;
 }
+
+.modal-hidden-content {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+	max-width: 600px;
+	max-height: 80vh;
+	overflow-y: auto;
+	background: #fff;
+	padding: 2em;
+	box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	z-index: 1000;
+}
+
+.modal-hidden-content::-webkit-scrollbar {
+	width: 8px;
+}
+.modal-hidden-content::-webkit-scrollbar-thumb {
+	background-color: rgba(0,0,0,0.2);
+	border-radius: 4px;
+}
