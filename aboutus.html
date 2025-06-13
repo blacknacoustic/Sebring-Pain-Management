@@ -106,8 +106,11 @@
 							<p>📞 Call Today: <strong>863-385-9333</strong></p>
 							<p><strong>Hours:</strong> Monday–Thursday 8 AM–5 PM · Friday 8 AM–12 Noon</p>
 							<p><strong>Our Address Is:</strong> 9 Ryant Blvd, Sebring, FL 33870</p>
+							<ul class="actions">
+								<li><a href="#" class="button" onclick="openModal()">Schedule an Appointment</a></li>
+							</ul>
 						</header>
-						<div class="row">
+						<!-- <div class="row">
 							<section class="col-6 col-12-narrower">
 								<form method="post" action="#">
 									<div class="row gtr-50">
@@ -143,7 +146,7 @@
 									</ul>
 								</div>
 							</section>
-						</div>
+						</div> -->
 					</div>
 					<div id="copyright" class="container">
 						<ul class="menu">
@@ -161,6 +164,25 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script src="assets/js/modal2.js"></script>
+		<!-- Appointment Modal -->
+		<div id="appointment-modal" class="modal-overlay">
+		  <div class="modal-content">
+		    <span class="close-button" onclick="closeModal()">&times;</span>
+		    <h2>Schedule an Appointment</h2>
+		    <form id="appointment-form" action="https://formspree.io/f/xdkzgbzq" method="POST">
+			  <input type="text" name="name" placeholder="First Name" required />
+			  <input type="text" name="lastName" placeholder="Last Name" required />
+			  <input type="email" name="email" placeholder="Email" required />
+			  <input type="tel" name="phone" placeholder="Phone" required />
+			  <input type="date" name="date" required />
+			  <input type="time" name="time" required />
+			  <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+			  <button type="submit" class="button">Send Appointment Request</button>
+			</form>
+		  </div>
+		</div>
+		
+		<div id="form-response" style="display: none; margin-top: 1em;"></div>
 	</body>
 </html>
